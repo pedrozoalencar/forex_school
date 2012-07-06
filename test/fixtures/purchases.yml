@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  transaction_id: MyString
+  annotation: MyString
+  transaction_date: 2012-07-05
+  payment_type: MyString
+  status: MyString
+  item_id: 1
+  item_value: 9.99
+
+two:
+  transaction_id: MyString
+  annotation: MyString
+  transaction_date: 2012-07-05
+  payment_type: MyString
+  status: MyString
+  item_id: 1
+  item_value: 9.99

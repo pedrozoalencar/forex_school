@@ -1,0 +1,35 @@
+<h1>Listing purchases</h1>
+
+<table>
+  <tr>
+    <th>Transaction</th>
+    <th>Annotation</th>
+    <th>Transaction date</th>
+    <th>Payment type</th>
+    <th>Status</th>
+    <th>Item</th>
+    <th>Item value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchases.each do |purchase| %>
+  <tr>
+    <td><%= purchase.transaction_id %></td>
+    <td><%= purchase.annotation %></td>
+    <td><%= purchase.transaction_date %></td>
+    <td><%= purchase.payment_type %></td>
+    <td><%= purchase.status %></td>
+    <td><%= purchase.item_id %></td>
+    <td><%= purchase.item_value %></td>
+    <td><%= link_to 'Show', purchase %></td>
+    <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
+    <td><%= link_to 'Destroy', purchase, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchase', new_purchase_path %>
