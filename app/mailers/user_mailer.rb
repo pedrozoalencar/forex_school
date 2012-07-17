@@ -9,6 +9,6 @@ class UserMailer < ActionMailer::Base
   	@purchase = purchase
 
   	sendgrid_category "Purchase Completed"
-  	mail(:to=> purchase.customer.email, :subject => t('Parabéns Por sua aquisição!'))
+  	mail(:to=> purchase.customer.email, :subject => t('Parab&#233;ns Por sua aquisi&#231;&#227;o!'))
   end
 end
