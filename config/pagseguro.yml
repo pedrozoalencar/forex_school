@@ -2,7 +2,7 @@ development: &development
   developer: true
   base: "http://localhost:3000"
   return_to: "/purchase/completed"
-  email: pedrozo.alencar@gmail.com
+  email: pedrozo.alencar@gmail.completed
 
 test:
   <<: *development

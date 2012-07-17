@@ -4,7 +4,7 @@ ForexSchool::Application.routes.draw do
   resources :items
 
   resources :purchases do
-    member do
+          member do
       get 'completed'
     end
   end

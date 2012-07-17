@@ -119,11 +119,11 @@ class PurchasesController < ApplicationController
       purchase.item = item
       purchase.save!
 
-
       # Aqui voce deve verificar se o pedido possui os mesmos produtos
       # que voce cadastrou. O produto soh deve ser liberado caso o status
       # do pedido seja "completed" ou "approved"
       
+
     end
 
     render :nothing => true
