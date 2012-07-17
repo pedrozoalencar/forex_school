@@ -91,7 +91,7 @@ class PurchasesController < ApplicationController
       
       customer = Customer.find_by_email(notification.buyer[:email])
 
-      unless (customer == null) do
+      unless (customer == null) then
         customer = Customer.new
         customer.name = notification.buyer[:name]
         customer.email = notification.buyer[:email]
