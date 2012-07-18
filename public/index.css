@@ -66,6 +66,14 @@ body {
 	color: #a1a1a1;
 }
 
+.separator {
+	margin-left: 1.5%!important;
+	margin-right: 1.5%!important;
+}
+.row-fluid .span4_5 {
+  width: 33.17094%;
+  *width: 33.17094%;
+}
 .row-button {
 	margin-top: 80px;
 }
@@ -73,6 +81,7 @@ body {
 .btn_inscreva {
 	line-height: 96px;
 	margin-top: 19px;
+	margin-left:0px!important;
 }
 .btn_inscreva a{
 	background: url("img/btn_inscrevase_51.png") 0 0 no-repeat;
