@@ -2,12 +2,12 @@ development: &development
   developer: true
   base: "http://localhost:3000"
   return_to: "/purchase/completed"
-  email: pedrozo.alencar@gmail.completed
+  email: pedrozo.alencar@gmail.com
 
 test:
   <<: *development
 
 production:
   authenticity_token: 260EBA753CD54E6AB45ADBA0EB06C8BF
-  email: pedrozo.alencar@gmail.com
+  email: contato@fxaddictsschool.com
   return_to: "http://fxaddictsschool.com/purchase/completed"
