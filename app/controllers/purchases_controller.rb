@@ -85,28 +85,30 @@ class PurchasesController < ApplicationController
   
   # POST /purchases/completed
   def completed
+    puts "######################## TO AQUI!"
     return unless request.post?
 
     pagseguro_notification do |notification|
       
       customer = Customer.find_by_email(notification.buyer[:email])
 
-      unless (customer == null) then
+      if (customer == nil) then
         customer = Customer.new
-        customer.name = notification.buyer[:name]
-        customer.email = notification.buyer[:email]
-        customer.address = notification.buyer[:address][:street]
-        customer.address_number = notification.buyer[:address][:number]
-        customer.address_completion = notification.buyer[:address][:complements]
-        customer.neighborhood = notification.buyer[:address][:neighbourhood]
-        customer.city = notification.buyer[:address][:city]
-        customer.state = notification.buyer[:address][:state]
-        customer.zip_code = notification.buyer[:address][:postal_code]
-
-        customer.save!
       end
 
-      item = Item.find(notification.notification.products[0][:id])
+      customer.name = notification.buyer[:name]
+      customer.email = notification.buyer[:email]
+      customer.address = notification.buyer[:address][:street]
+      customer.address_number = notification.buyer[:address][:number]
+      customer.address_completion = notification.buyer[:address][:complements]
+      customer.neighborhood = notification.buyer[:address][:neighbourhood]
+      customer.city = notification.buyer[:address][:city]
+      customer.state = notification.buyer[:address][:state]
+      customer.zipcode = notification.buyer[:address][:postal_code]
+
+      customer.save!
+
+      item = Item.find(notification.products[0][:id])
 
       purchase = Purchase.new
       purchase.transaction_id = notification.mapping_for(:transaction_id)
@@ -119,9 +121,21 @@ class PurchasesController < ApplicationController
       purchase.item = item
       purchase.save!
 
+
+
       # Aqui voce deve verificar se o pedido possui os mesmos produtos
       # que voce cadastrou. O produto soh deve ser liberado caso o status
       # do pedido seja "completed" ou "approved"
+
+      puts "antes de entrar"
+      puts "PURSCAHSE.STATUS \"#{purchase.status}\""
+      puts "PUSRCHASE.ITEM_VALUSE #{purchase.item_value}"
+      puts "ITEM.VALUE #{item.price}"
+      puts purchase.status.to_s == "completed"
+      if purchase.status.to_s == "completed" && purchase.item_value == item.price then
+        puts "entrou"
+        UserMailer.purchase_completed(purchase).deliver
+      end
       
 
     end

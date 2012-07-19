@@ -1,13 +1,15 @@
 ForexSchool::Application.routes.draw do
   get "home/index"
 
+  match 'purchase/completed' => 'purchases#completed'
+
   resources :customers
 
   resources :items
 
   resources :purchases do
-          member do
-      get 'completed'
+    member do
+      post 'completed'
     end
   end
 
