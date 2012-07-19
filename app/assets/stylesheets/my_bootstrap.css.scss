@@ -1,0 +1,20 @@
+$bodyBackground: transparent;
+$textColor: #ffffff;
+
+
+$sansFontFamily: 'Ubuntu Condensed', sans-serif; 
+$baseFontFamily:'Ubuntu Condensed';
+$altFontFamily:'Ubuntu Condensed';
+
+
+$navbarBackground: #000000;
+$navbarBackgroundHighlight: #000000;
+
+$heroUnitBackground: transparent;
+$heroUnitLeadColor: white;
+
+
+
+// import original bootstrap
+@import "bootstrap";
+@import "responsive";
