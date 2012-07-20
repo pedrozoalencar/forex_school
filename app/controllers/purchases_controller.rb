@@ -83,10 +83,14 @@ class PurchasesController < ApplicationController
     end
   end
   
-  # POST /purchases/completed
+  # POST /purchase/completed
   def completed
     puts "######################## TO AQUI!"
-    return unless request.post?
+    if request.get? then
+      respond_to do |format|
+          format.html { redirect_to root_url, notice: 'Purchase was successfully created.' }
+      end
+    end
 
     pagseguro_notification do |notification|
       
@@ -111,7 +115,7 @@ class PurchasesController < ApplicationController
       item = Item.find(notification.products[0][:id])
 
       purchase = Purchase.new
-      purchase.transaction_id = notification.mapping_for(:transaction_id)
+      purchase.transaction_id = notification.mapping_for(:order_id)
       purchase.annotation = notification.mapping_for(:notes)
       purchase.transaction_date = notification.processed_at
       purchase.payment_type = notification.payment_method
@@ -132,11 +136,17 @@ class PurchasesController < ApplicationController
       puts "PUSRCHASE.ITEM_VALUSE #{purchase.item_value}"
       puts "ITEM.VALUE #{item.price}"
       puts purchase.status.to_s == "completed"
-      if purchase.status.to_s == "completed" && purchase.item_value == item.price then
+      if (purchase.status.to_s == "completed" or purchase.status.to_s == "approved") && purchase.item_value == item.price then
         puts "entrou"
-        UserMailer.purchase_completed(purchase).deliver
+
+        if purchase.status.to_s == "completed" then
+          p1 = Purchase.find_all_by_transaction_id_and_status(purchase.transaction_id,"approved")[0];
+
+          return unless p1 == nil
+        end 
       end
-      
+
+      UserMailer.purchase_completed(purchase).deliver
 
     end
 

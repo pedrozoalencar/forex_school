@@ -78,12 +78,12 @@ body {
 	margin-top: 80px;
 }
 
-.btn_inscreva {
-	line-height: 96px;
+.btn_inscreva_line {
+	line-height: 10px;
 	margin-top: 19px;
 	margin-left:0px!important;
 }
-.btn_inscreva a{
+.btn_inscreva {
 	background: image-url('btn_inscrevase_51.png') 0 0 no-repeat;
 	width:203px;
 	height:71px;
@@ -94,7 +94,7 @@ body {
 	font-weight: 100;
 	text-shadow: 1px 1px #444444;
 }
-.btn_inscreva:hover a {
+.btn_inscreva:hover {
 	background: image-url('btn_inscrevase_51.png') 0 -70px no-repeat;
 }
 .row-chamada-bloco {
@@ -106,6 +106,7 @@ body {
 	background: none!important;
 	height: 10px!important;
 	font-size: 12px!important;
+	display:inline!important;
 }
 
 .row-chamada-bloco h2 {
@@ -200,4 +201,12 @@ body {
 	margin-left: 20px;
 	margin-top: 448px;
 	display: block;
+}
+.duvidas {
+	margin-left: 26px;
+}
+
+.duvidas_final {
+	margin: auto;
+	width: 153px;
 }
