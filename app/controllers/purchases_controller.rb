@@ -86,71 +86,68 @@ class PurchasesController < ApplicationController
   # POST /purchase/completed
   def completed
     puts "######################## TO AQUI!"
-    if request.get? then
-      respond_to do |format|
+    if request.post? then
+      pagseguro_notification do |notification|
+        
+        customer = Customer.find_by_email(notification.buyer[:email])
+
+        if (customer == nil) then
+          customer = Customer.new
+        end
+
+        customer.name = notification.buyer[:name]
+        customer.email = notification.buyer[:email]
+        customer.address = notification.buyer[:address][:street]
+        customer.address_number = notification.buyer[:address][:number]
+        customer.address_completion = notification.buyer[:address][:complements]
+        customer.neighborhood = notification.buyer[:address][:neighbourhood]
+        customer.city = notification.buyer[:address][:city]
+        customer.state = notification.buyer[:address][:state]
+        customer.zipcode = notification.buyer[:address][:postal_code]
+
+        customer.save!
+
+        item = Item.find(notification.products[0][:id])
+
+        purchase = Purchase.new
+        purchase.transaction_id = notification.mapping_for(:order_id)
+        purchase.annotation = notification.mapping_for(:notes)
+        purchase.transaction_date = notification.processed_at
+        purchase.payment_type = notification.payment_method
+        purchase.status = notification.status
+        purchase.item_value = notification.products[0][:price]
+        purchase.customer = customer
+        purchase.item = item
+        purchase.save!
+
+
+
+        # Aqui voce deve verificar se o pedido possui os mesmos produtos
+        # que voce cadastrou. O produto soh deve ser liberado caso o status
+        # do pedido seja "completed" ou "approved"
+
+        puts "antes de entrar"
+        puts "PURSCAHSE.STATUS \"#{purchase.status}\""
+        puts "PUSRCHASE.ITEM_VALUSE #{purchase.item_value}"
+        puts "ITEM.VALUE #{item.price}"
+        puts purchase.status.to_s == "completed"
+        if (purchase.status.to_s == "completed" or purchase.status.to_s == "approved") && purchase.item_value == item.price then
+          puts "entrou"
+
+          if purchase.status.to_s == "completed" then
+            p1 = Purchase.find_all_by_transaction_id_and_status(purchase.transaction_id,"approved")[0];
+
+            return unless p1 == nil
+          end 
+
+          UserMailer.purchase_completed(purchase).deliver
+        end
+      end
+    end
+    
+    respond_to do |format|
           format.html { redirect_to root_url, notice: 'Purchase was successfully created.' }
-      end
     end
-
-    pagseguro_notification do |notification|
-      
-      customer = Customer.find_by_email(notification.buyer[:email])
-
-      if (customer == nil) then
-        customer = Customer.new
-      end
-
-      customer.name = notification.buyer[:name]
-      customer.email = notification.buyer[:email]
-      customer.address = notification.buyer[:address][:street]
-      customer.address_number = notification.buyer[:address][:number]
-      customer.address_completion = notification.buyer[:address][:complements]
-      customer.neighborhood = notification.buyer[:address][:neighbourhood]
-      customer.city = notification.buyer[:address][:city]
-      customer.state = notification.buyer[:address][:state]
-      customer.zipcode = notification.buyer[:address][:postal_code]
-
-      customer.save!
-
-      item = Item.find(notification.products[0][:id])
-
-      purchase = Purchase.new
-      purchase.transaction_id = notification.mapping_for(:order_id)
-      purchase.annotation = notification.mapping_for(:notes)
-      purchase.transaction_date = notification.processed_at
-      purchase.payment_type = notification.payment_method
-      purchase.status = notification.status
-      purchase.item_value = notification.products[0][:price]
-      purchase.customer = customer
-      purchase.item = item
-      purchase.save!
-
-
-
-      # Aqui voce deve verificar se o pedido possui os mesmos produtos
-      # que voce cadastrou. O produto soh deve ser liberado caso o status
-      # do pedido seja "completed" ou "approved"
-
-      puts "antes de entrar"
-      puts "PURSCAHSE.STATUS \"#{purchase.status}\""
-      puts "PUSRCHASE.ITEM_VALUSE #{purchase.item_value}"
-      puts "ITEM.VALUE #{item.price}"
-      puts purchase.status.to_s == "completed"
-      if (purchase.status.to_s == "completed" or purchase.status.to_s == "approved") && purchase.item_value == item.price then
-        puts "entrou"
-
-        if purchase.status.to_s == "completed" then
-          p1 = Purchase.find_all_by_transaction_id_and_status(purchase.transaction_id,"approved")[0];
-
-          return unless p1 == nil
-        end 
-      end
-
-      UserMailer.purchase_completed(purchase).deliver
-
-    end
-
-    render :nothing => true
 
   end
 end

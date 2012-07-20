@@ -7,11 +7,7 @@ ForexSchool::Application.routes.draw do
 
   resources :items
 
-  resources :purchases do
-    member do
-      post 'completed'
-    end
-  end
+  resources :purchases
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

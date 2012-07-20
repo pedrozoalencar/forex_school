@@ -27,7 +27,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'pagseguro'
+gem "pagseguro", "~> 0.1.13"
 gem 'sendgrid'
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 
