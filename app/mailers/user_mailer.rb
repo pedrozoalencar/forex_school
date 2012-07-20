@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
   sendgrid_category :use_subject_lines
   sendgrid_enable   :ganalytics, :opentrack, :clicktrack
   
-  default from: "contato@fxaddictsschool.com"
+  default from: "Fx Addicts School contato@fxaddictsschool.com"
 
   def purchase_completed(purchase)
   	@purchase = purchase
