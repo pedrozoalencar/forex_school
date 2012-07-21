@@ -24,7 +24,21 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33556622-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
   </head>
+
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
     <form action="<%= PagSeguro.gateway_url %>" class="pagseguro" method="post">
     <%= hidden_field_tag "encoding", "UTF-8"  %>
@@ -53,11 +67,11 @@
       	<%= image_tag "logo_company_04.png" %>
       </span>
       <div class="hero-unit highlight_logo">
-        <%= image_tag "logo_curso_09.png" %>
+        <h1><%= image_tag "logo_curso_09.png", :alt => "CURSO DE FOREX SCALPING - EM PORTUGUÊS" %></h1>
         <div class="row-fluid">
-          <p>
+          <h2>
             A Fx Addicts School traz para voc&#234; um curso de Scalping, onde mostrar&#225; a voc&#234;, exatamente onde, quando e o por que fazer suas entradas e sa&#237;das neste mercado. N&#243;s N&#195;O oferecemos um sistema &#8220;m&#225;gico&#8221;,  nem &#8220;milagroso&#8221; para enriquecer em uma semana, m&#234;s ou um ano, <br/>mas princ&#237;pios s&#243;lidos para que voc&#234; possa alcan&#231;ar ganhos consistentes.
-          </p>
+          </h2>
         </div>
         <div class="row-fluid row-button">
             <div class="span4_5 vagas">15 Vagas</div>
