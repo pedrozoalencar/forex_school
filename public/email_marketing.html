@@ -19,7 +19,7 @@
       /* Reset Styles */
       body{margin:0; padding:0;}
       img{border:none; font-size:14px; font-weight:bold; height:auto; line-height:100%; outline:none; text-decoration:none; text-transform:capitalize;}
-      #backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+      #backgroundTable{height:100% !important; margin:0; padding:0; width:100%!important;display: table}
 
       /* Template Styles */
 
@@ -72,7 +72,7 @@
         display:block;
         /*@editable*/ font-family:Verdana;
         /*@editable*/ font-size:14px;
-        /*@editable*/ font-weight:bold;
+        /*@editable*/ font-weight:normal;
         /*@editable*/ line-height:100%;
         margin-top:30px;
         margin-bottom:10px;
@@ -152,7 +152,7 @@
       
       .preheaderContent div img{
         height:auto;
-        max-width:600px;
+        max-width:565px;
       }
 
       /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
@@ -202,7 +202,7 @@
 
       #headerImage{
         height:auto;
-        max-width:600px !important;
+        max-width:565px !important;
       }
 
       /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
@@ -346,7 +346,7 @@
       .row-chamada-bloco_h2 {
         font-family: 'Arial', sans-serif;
         font-weight: 500!important;
-        font-size: 18px;
+        font-size: 17px;
         color: #cbf73a!important;
         text-shadow: 2px 2px black;
         font-style: normal;
@@ -406,7 +406,7 @@
     </style>
   </head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-      <center>
+      <div bgcolor="#dddddd" marginwidth="0" marginheight="0" style="display:block!important"> 
           <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
               <tr>
                   <td align="center" valign="top">
@@ -436,20 +436,19 @@
                             </tr>
                         </table>
                         <!-- // End Template Preheader \\ -->
-                      <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
+                      <table border="0" cellpadding="0" cellspacing="0" width="565" id="templateContainer">
                           <tr>
                               <td align="center" valign="top">
                                     <!-- // Begin Template Header \\ -->
-                                  <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="565" id="templateHeader">
                                         <tr>
                                             <td class="headerContent">
                                             
                                               <!-- // Begin Module: Standard Header Image \\ -->
-                                              <img src="/gif_transparent.gif" style="width:457px;height:40px;align:right;text-align:right">
-                                              <img src="http://www.fxaddictsschool.com/assets/em_04.png" style="width:133px;height:40px;align:right;text-align:right">
-                                              <img src="/gif_transparent.gif" style="width:600px;height:60px;align:right;text-align:right">
-
-                                              <img src="http://www.fxaddictsschool.com/assets/em_10.png" style="max-width:600px;max-height:89px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
+                                              <div style="text-align: left;"><img src="http://www.fxaddictsschool.com/assets/em_04.png" style="width:133px;height:40px;align:left;text-align:left"></div>
+                                              <br/>
+                                              <br/>
+                                              <img src="http://localhost:3000/assets/em_11.png" style="width:570px;height:89px" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
                                               <!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
@@ -461,7 +460,7 @@
                           <tr>
                               <td align="center" valign="top">
                                     <!-- // Begin Template Body \\ -->
-                                  <table border="0" cellpadding="10" cellspacing="0" width="600" id="templateBody">
+                                  <table border="0" cellpadding="10" cellspacing="0" width="565" id="templateBody">
                                       <tr>
                                             <td valign="top" class="bodyContent">
                                 
@@ -578,7 +577,7 @@
                           <tr>
                               <td align="center" valign="top">
                                     <!-- // Begin Template Footer \\ -->
-                                  <table border="0" cellpadding="10" cellspacing="0" width="600" id="templateFooter">
+                                  <table border="0" cellpadding="10" cellspacing="0" width="565" id="templateFooter">
                                       <tr>
                                           <td valign="top" class="footerContent">
                                             
@@ -647,6 +646,6 @@
                     </td>
                 </tr>
             </table>
-        </center>
+        </div>
     </body>
 </html>
