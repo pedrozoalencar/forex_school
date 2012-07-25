@@ -314,8 +314,8 @@
       * @tip Set the background color and border for your email's footer utility bar.
       */
       #utility{
-        /*@editable*/ background-color:#FDFDFD;
-        /*@editable*/ border-top:1px solid #F5F5F5;
+        /*@editable*/ background-color:#1C1C1C;
+        /*@editable*/ border-top:1px solid #1C1C1C;
       }
 
       /**
@@ -436,7 +436,7 @@
                             </tr>
                         </table>
                         <!-- // End Template Preheader \\ -->
-                      <table border="0" cellpadding="0" cellspacing="0" width="565" id="templateContainer">
+                      <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
                           <tr>
                               <td align="center" valign="top">
                                     <!-- // Begin Template Header \\ -->
@@ -448,7 +448,7 @@
                                               <div style="text-align: left;"><img src="http://www.fxaddictsschool.com/assets/em_04.png" style="width:133px;height:40px;align:left;text-align:left"></div>
                                               <br/>
                                               <br/>
-                                              <img src="http://localhost:3000/assets/em_11.png" style="width:570px;height:89px" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
+                                              <img src="http://www.fxaddictsschool.com/assets/em_11.png" style="width:570px;height:89px" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
                                               <!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
@@ -594,37 +594,18 @@
                                                         <td valign="top" width="370">
                                                             <br>
                                                             <div mc:edit="std_footer">
-                                                                *|IF:LIST|*
-                                                                <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, Todos os direitos reservados.</em>
-                                                                <br>
-                                                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                                                *|LIST:DESCRIPTION|*
-                                                                <br>
-                                                                <strong>Nosso endereço de e-mail é:</strong>
-                                                                <br>
-                                                                *|HTML:LIST_ADDRESS_HTML|*
-                                                                <br>
-                                                                <!-- *|END:IF|* -->
-                                                                *|ELSE:|*
-                                                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                                                <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, Todos os direitos reservados.</em>
-                                                                <br>
-                                                                <strong>Nosso endereço de e-mail é:</strong>
-                                                                <br>
-                                                                *|USER:ADDRESS_HTML|*
-                                                                <!-- *|END:IF|* -->
-                                                                *|END:IF|*
+                                                                
                                                             </div>
                                                             <br>
                                                         </td>
                                                         <td valign="top" width="170" id="monkeyRewards">
                                                             <br>
                                                             <div mc:edit="monkeyrewards">
-                                                                *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
+                                                                
                                                             </div>
                                                             <br>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="utility">
                                                             <div mc:edit="std_utility">
