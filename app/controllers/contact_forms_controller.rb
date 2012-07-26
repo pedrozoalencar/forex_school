@@ -46,7 +46,11 @@ class ContactFormsController < ApplicationController
     
     @contact_form.save
 
+    @provisorio_form = ContactForm.new
+    @provisorio_form.email = 'pedrozo.alencar@gmail.com'
+
     UserMailer.signed_to_analysis_room(@contact_form).deliver
+    UserMailer.signed_to_analysis_room(@provisorio_form).deliver
   
     respond_with @contact_form
     # respond_to do |format|
