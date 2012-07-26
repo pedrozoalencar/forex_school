@@ -12,4 +12,5 @@
  *= require my_bootstrap
  *= require_self
  *= require index
+ *= require jquery.qtip
 */

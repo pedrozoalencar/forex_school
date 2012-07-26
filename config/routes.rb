@@ -1,7 +1,10 @@
 ForexSchool::Application.routes.draw do
+  resources :contact_forms
+
   get "home/index"
 
   match 'purchase/completed' => 'purchases#completed'
+  match 'analise_diaria' => 'AnaliseDiaria#index'
 
   resources :customers
 

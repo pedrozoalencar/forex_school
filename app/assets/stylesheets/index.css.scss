@@ -212,3 +212,63 @@ body {
 	margin: auto;
 	width: 153px;
 }
+
+
+
+
+
+/* ANALISE DIARIA */
+
+.proxima_analise_diaria {
+	font-size: 34px;
+	line-height: 49px;
+	text-shadow: 2px 2px 
+	black;
+}
+
+.proxima_analise_diaria span {
+	color: #a1a1a1;
+}
+
+.email_field {
+	min-height: 38px!important;
+	font-size: 21px!important;
+}
+
+.btn_participe_analise {
+	background: image-url('ad_07.png') 0 0 no-repeat;
+	width:200px;
+	height:47px;
+	display: block;
+	font-size: 25px;
+	font-family: 'Helvetica';
+	padding: 0px 0px;
+	font-weight: 100;
+	text-shadow: 1px 1px #444444;
+}
+.btn_participe_analise:hover {
+	/*background: image-url('ad_07.png') 0 -70px no-repeat;*/
+}
+.div_email {
+	font-size: 86px;
+	text-shadow: 1px 1px black;
+	height: 78px;
+	line-height: 86px;
+	margin-left:0px!important;
+	width:42%!important;
+	margin-top: 2px;
+
+}
+.row_form {
+	/*margin-top:40px;*/
+}
+
+.notice_success {
+  font-family: 'Exo', cursive;
+  font-size:20px;
+  /*position: relative;*/
+  /*float: left;*/
+  width: 100%;
+  text-align: center;
+  padding: 24px;
+}
