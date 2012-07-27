@@ -21,5 +21,12 @@ class UserMailer < ActionMailer::Base
   	mail(:to=> contact_form.email, :subject => "Sua inscrição foi efetuada com sucesso")	
   end
 
+  def signed_to_analysis_room_owner_alert(contact_form, owner_email)
+  	@contact_form = contact_form
+
+  	sendgrid_category "Signed to Analysis Room - Owner alert"
+  	mail(:to=> owner_email, :subject => "Você tem um novo inscrito para a Análise Diária")	
+  end
+
 
 end
