@@ -62,6 +62,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    newrelic_rpm (3.3.4.1)
     pagseguro (0.1.13)
     pg (0.14.0)
     polyglot (0.3.3)
@@ -120,6 +121,7 @@ DEPENDENCIES
   anjlab-bootstrap-rails (>= 2.0)
   coffee-rails (~> 3.2.1)
   jquery-rails
+  newrelic_rpm
   pagseguro (~> 0.1.13)
   pg
   rails (= 3.2.3)
