@@ -50,8 +50,8 @@ class ContactFormsController < ApplicationController
     @provisorio_form.email = 'pedrozo.alencar@gmail.com'
 
     UserMailer.signed_to_analysis_room(@contact_form).deliver
-    UserMailer.signed_to_analysis_room_owner_alert(@provisorio_form,'pedrozo.alencar@gmail.com').deliver
-    UserMailer.signed_to_analysis_room_owner_alert(@provisorio_form,'andersoncalvo@hotmail.com').deliver
+    UserMailer.signed_to_analysis_room_owner_alert(@contact_form,'pedrozo.alencar@gmail.com').deliver
+    UserMailer.signed_to_analysis_room_owner_alert(@contact_form,'andersoncalvo@hotmail.com').deliver
 
   
     respond_with @contact_form
