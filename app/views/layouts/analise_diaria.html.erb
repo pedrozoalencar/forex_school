@@ -62,25 +62,29 @@
       <br/>
       <br/>
       <div class="hero-unit highlight_logo">
-        <h1><%= image_tag "ad_03.png", :size => "919x213", :alt => "ACOMPANHE SEMANALMENTE A ANÁLISE DO MERCADO DE FOREX ONLINE E EM TEMPO REAL JUNTAMENTE COM UM TRADER PROFISSIONAL" %></h1>
+        <h1><%= image_tag "ad_03.png", :size => "919x213", :alt => "ACOMPANHE TODOS OS DIAS A ANÁLISE DO MERCADO DE FOREX ONLINE E EM TEMPO REAL JUNTAMENTE COM UM TRADER PROFISSIONAL" %></h1>
         <div class="row-fluid row-button">
             <div class="span2">&nbsp;</div>
             <div class="span5 vagas">12 Vagas</div>
-            <div class="span4 proxima_analise_diaria"><span>data:</span> 30/07/2012<br/><span>hor&#225;rio:</span> 21H</div>
+            <div class="span4 proxima_analise_diaria"><span>data:</span> Diariamente<br/><span>hor&#225;rio:</span> 18H</div>
             <div class="span1">&nbsp;</div>
         </div>
         <div class="notice_success"><span>&nbsp;</span></div>
+        <%= form_for(@contact_form, :remote => true) do |f| %>
+        
         <div class="row-fluid row_form">
-          <%= form_for(@contact_form, :remote => true) do |f| %>
             <div class="span2">&nbsp;</div>
-            <div class="span5 div_email"><%= f.text_field :email, :class => "span12 email_field", :placeholder => "E-mail" %> <!-- input type="text" class="span12 email_field" placeholder="E-Mail"--></div>
+            <div class="span5 div_email">
+              <%= f.text_field :email, :class => "span12 email_field", :placeholder => "E-mail" %> 
+              <%= f.text_field :skype_username, :class => "span12 email_field", :placeholder => "Skype" %>
+            </div>
             <div class="span3">
               <a href="" class="btn_participe_analise" id="contact_form_submit" onclick="return false;"></a>
               <span class="duvidas">Dúvidas? Mande-nos um <a class="link_email" href="mailto:contato@fxaddictsschool.com">e-mail</a>.</span>
             </div>
-            <div class="span1">&nbsp;</div>
-          <% end %>
+            <div class="span1">&nbsp;</div>          
         </div>
+        <% end %>
       </div>
       <div class= "row-fluid row-chamada-bloco">
           <div class="span12" style="margin-left:10px">
@@ -99,9 +103,18 @@
   </form>
 
   <script>
+    window.submited = false;
     $(document).ready(function() {
       // On Submit Contact Us Form
       $('#contact_form_submit').click(function() {   
+        
+        //Impede do usuário submeter várias vezes
+        if (window.submited == true) {
+          return false;
+        } else {
+          window.submited = true;
+        }
+
         $.ajax({
           url:'/contact_forms',
           type: 'POST',
@@ -114,6 +127,11 @@
             });
           },
           error: function(jqXHR, textStatus, errorThrown) {
+            
+            //Em caso de erro volta o status para nao submetido 
+            //para que o usuario possa reenviar o formulario
+            window.submited = false;
+
             var json = $.parseJSON(jqXHR.responseText).errors;
             $('div.qtip').remove();
               

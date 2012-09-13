@@ -1,0 +1,541 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"no",
+				"no-repeat  (value)"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"row",
+				"row-chamada-bloco"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"item",
+				"item"
+			],
+			[
+				"lorem",
+				"lorem	lorem - One sentence <p>"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Developer/workspace_ruby/btconsultoria/Gemfile",
+			"settings":
+			{
+				"buffer_size": 1046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Developer/workspace_ruby/btconsultoria/app/assets/stylesheets/application.css",
+			"settings":
+			{
+				"buffer_size": 594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Developer/workspace_ruby/btconsultoria/app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Developer/workspace_ruby/btconsultoria/app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 272,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sub",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"su",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"Sub",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"subclim",
+				"Subclim: Import class under cursor"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"Terminal",
+				"Preferences: Terminal Settings – User"
+			],
+			[
+				"set eclip",
+				"Subclim: Set Eclim executable path"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Discover",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Developer/workspace_ruby/forex_school/db/schema.rb",
+		"/Developer/workspace_ruby/forex_school/app/views/layouts/index.html.erb",
+		"/Developer/workspace_ruby/forex_school/app/views/home/index.html.erb",
+		"/Developer/workspace_ruby/forex_school/app/assets/stylesheets/index.css",
+		"/Developer/workspace_ruby/forex_school/public/index.css",
+		"/Developer/workspace_ruby/forex_school/app/views/customers/index.html.erb",
+		"/Developer/workspace_ruby/forex_school/public/index.html",
+		"/Developer/workspace_ruby/forex_school/app/mailers/user_mailer.rb",
+		"/Developer/workspace_ruby/forex_school/config/initializers/mail.rb",
+		"/Developer/workspace_ruby/forex_school/config/environments/production.rb",
+		"/Developer/workspace_ruby/forex_school/config/environment.rb",
+		"/Developer/workspace_ruby/forex_school/config/routes.rb",
+		"/Developer/workspace_ruby/forex_school/app/controllers/purchases_controller.rb",
+		"/Developer/workspace_ruby/forex_school/config/pagseguro.yml",
+		"/Developer/workspace_ruby/forex_school/db/migrate/20120705121010_create_purchases.rb",
+		"/Developer/workspace_ruby/forex_school/db/migrate/20120705121848_create_customers.rb",
+		"/Developer/workspace_ruby/forex_school/db/migrate/20120705122126_add_column_customer_id_purchase.rb",
+		"/Developer/workspace_ruby/forex_school/Gemfile",
+		"/Developer/workspace_ruby/forex_school/forex_shool.sublime-project",
+		"/Developer/workspace_legisdata/MonitoracaoRelatorioMBean/src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/ComponenteServicoTest.java",
+		"/Developer/workspace_ruby/ralencar/config/routes.rb",
+		"/Developer/workspace_legisdata/MonitoracaoRelatorioMBean/src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/AreaServicoTest.java",
+		"/Users/Renato/Library/Application Support/Sublime Text 2/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/Renato/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/Renato/Library/Application Support/Sublime Text 2/Packages/User/Terminal.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Developer/workspace_ruby/forex_school/config"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"url-image",
+			"))",
+			" %>",
+			"url(<%= asset_path ",
+			"url(",
+			"<img .+?>",
+			"<img",
+			"daddy",
+			"download",
+			"text-ali",
+			"row-button",
+			"      \n",
+			"mail",
+			"class",
+			"\n",
+			"/compra/efetuada",
+			"pagseguro"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"image-url",
+			")",
+			"url-image(",
+			"url(<%= asset_path 'bg_06.jpg' %>",
+			"",
+			"<%= image_tag \"logo_company_04.png\" %><img",
+			"/purchase/completed",
+			"Searching",
+			"true"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Developer/workspace_ruby/btconsultoria/Gemfile",
+					"settings":
+					{
+						"buffer_size": 1046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Developer/workspace_ruby/btconsultoria/app/assets/stylesheets/application.css",
+					"settings":
+					{
+						"buffer_size": 594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Developer/workspace_ruby/btconsultoria/app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Developer/workspace_ruby/btconsultoria/app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								234,
+								234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"application.html",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"application.css",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"app",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"my",
+				"app/assets/stylesheets/my_bootstrap.css.scss"
+			],
+			[
+				"application",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"mail",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"index",
+				"app/assets/stylesheets/index.scss"
+			],
+			[
+				"index.css",
+				"app/assets/stylesheets/index.css"
+			],
+			[
+				"inex",
+				"public/index.css"
+			],
+			[
+				"inde.html.e",
+				"app/views/customers/index.html.erb"
+			],
+			[
+				"home/index",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"index.html.erb",
+				"app/views/layouts/index.html.erb"
+			],
+			[
+				"user",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"purchases",
+				"app/controllers/purchases_controller.rb"
+			],
+			[
+				"vari",
+				"public/bootstrap/less/variables.less"
+			],
+			[
+				"index.",
+				"public/index.html"
+			],
+			[
+				"maile",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"user_",
+				"app/mailers/user_mailer.rb"
+			],
+			[
+				"produ",
+				"config/environments/production.rb"
+			],
+			[
+				"env",
+				"config/environment.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"migra",
+				"db/migrate/20120705121010_create_purchases.rb"
+			],
+			[
+				"purchase_controller",
+				"app/controllers/purchases_controller.rb"
+			],
+			[
+				"add_c",
+				"db/migrate/20120705122126_add_column_customer_id_purchase.rb"
+			],
+			[
+				"pag",
+				"config/pagseguro.yml"
+			],
+			[
+				"test",
+				"src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/ComponenteServicoTest.java"
+			],
+			[
+				"areaservico",
+				"src/br/com/sicoob/sisbr/monitoracao/relatorio/ejb/jmx/AreaServicoTest.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"imestre",
+				"/Developer/workspace_ruby/imestre/imestre.sublime-project"
+			],
+			[
+				"",
+				"/Developer/workspace_ruby/forex_school/forex_shool.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true
+}

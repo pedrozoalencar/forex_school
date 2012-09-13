@@ -44,14 +44,11 @@ class ContactFormsController < ApplicationController
   def create
     @contact_form = ContactForm.new(params[:contact_form])
     
-    @contact_form.save
-
-    @provisorio_form = ContactForm.new
-    @provisorio_form.email = 'pedrozo.alencar@gmail.com'
-
-    UserMailer.signed_to_analysis_room(@contact_form).deliver
-    UserMailer.signed_to_analysis_room_owner_alert(@contact_form,'pedrozo.alencar@gmail.com').deliver
-    UserMailer.signed_to_analysis_room_owner_alert(@contact_form,'andersoncalvo@hotmail.com').deliver
+    if @contact_form.save
+      UserMailer.signed_to_analysis_room(@contact_form).deliver
+      UserMailer.signed_to_analysis_room_owner_alert(@contact_form,'pedrozo.alencar@gmail.com').deliver
+      UserMailer.signed_to_analysis_room_owner_alert(@contact_form,'andersoncalvo@hotmail.com').deliver
+    end
 
   
     respond_with @contact_form
